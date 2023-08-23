@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyLieferando</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,900;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="render(load()) ">
+    <div class="header">
+      <div>
+        <a class="myLieferando" href="index.html">MyLieferando</a>
+      </div>
+      <div class="address">
+        <span>Musterstraße 5</span>
+        <span>80339, München</span>
+      </div>
+      <div class="burgerMenu">
+        <img class="burgerMenuIMG" src="img/bars-solid.svg" alt="" />
+      </div>
+    </div>
+
+    <img class="pizzaIMG" src="img/pizza.jpg" alt="" />
+
+    <div class="containerRestaurant">
+      <h1>Pizzeria Napoli</h1>
+      <div class="starImgContainer">
+        <img class="starIMG" src="img/star.png" alt="" />
+        <img class="starIMG" src="img/star.png" alt="" />
+        <img class="starIMG" src="img/star.png" alt="" />
+        <img class="starIMG" src="img/star.png" alt="" />
+        <img class="starIMG" src="img/star.png" alt="" />
+        <span class="reviews">(475 Bewertungen)</span>
+      </div>
+    </div>
+
+    <div class="foodContainer">
+      <div class="foodSelectionContainer">
+        <img class="loupe" src="img/magnifying-glass-solid.svg" alt="" />
+        <span class="foodSpan defaultFood">Beliebte Gerichte</span>
+        <span class="foodSpan">Pizza</span>
+        <span class="foodSpan">Pasta</span>
+        <span class="foodSpan">Salate</span>
+        <span class="foodSpan">Vorspeisen</span>
+        <span class="foodSpan">Nachspeisen</span>
+        <span class="foodSpan">Suppen</span>
+      </div>
+    </div>
+
+    <div class="dishesContainer">
+      <div class="selectedDishes">
+        <span class="selectedDishesSpan">Beliebte Gerichte</span>
+      </div>
+    </div>
+
+    <div id="shoppingBasket" class="shoppingBasket d-none">
+      <div class="shoppingBasketHeadline">
+        <h2>Warenkorb</h2>
+      </div>
+      <div class="bagContainer">
+        <img class="bagIMG" src="img/bag-shopping-solid.svg" alt="" />
+        <span class="spanBagContainer">Wähle leckere Gerichte aus der Karte und bestelle dein Menü.</span>
+        <div class="basketContentContainer"></div>
+      </div>
+      <div id="basketContent" class="basketContent"></div>
+      <span id="spanTotal" class="spanSum td"></span>
+      <div class="orderButtonContainer">
+        <a href="order.html" class="orderButton" type="submit" onclick="deleteBasketAfterOrder()">Bestellen</a>
+      </div>
+    </div>
+
+    <div id="content" class="content"></div>
+
+    <div id="shoppingBasketMobilePopUp" class="shoppingBasketMobile-bg d-none">
+      <div class="shoppingBasketMobilePopUp">
+        <div class="shoppingBasketMobilePopUpHeader">
+          <a class="shoppingBasketMobilePopUpButton" onclick="toggleMobileShoppingBasket()">X</a>
+        </div>
+        <div class="mobileBasketHeadline">
+          <h2>Warenkorb</h2>
+        </div>
+        <div class="bagContainer">
+          <img class="bagIMG" src="img/bag-shopping-solid.svg" alt="" />
+          <span class="spanBagContainer">Wähle leckere Gerichte aus der Karte und bestelle dein Menü.</span>
+        </div>
+        <table class="sumContainer"></table>
+        <div id="mobileBasketContent" class="mobileBasketContent"></div>
+        <span id="spanTotalMobile" class="spanSum td"></span>
+        <div class="orderButtonContainer">
+          <a href="order.html" class="orderButton" type="submit" onclick="deleteBasketAfterOrder()">Bestellen</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="shoppingBasketMobile" class="shoppingBasketMobileContainer">
+      <a onclick="toggleMobileShoppingBasket()" class="shoppingBasketMobile">
+        <h3>Warenkorb</h3>
+      </a>
+    </div>
+  </body>
+</html>
